@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Logo -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/logo_e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="e"
+                android:textSize="32sp"
+                android:textColor="#58C185"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/logo_paw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paw"
+                android:textSize="28sp"
+                android:textColor="#2F2F2F"
+                android:textStyle="bold"
+                android:layout_marginStart="2dp" />
+
+            <TextView
+                android:id="@+id/logo_ph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PH"
+                android:textSize="10sp"
+                android:textColor="#2F2F2F"
+                android:textStyle="bold"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="7dp"/>
+
+        </LinearLayout>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/signup_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's Get Started!"
+            android:textSize="28sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
+
+        <!-- First Name and Suffix Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/first_name_field"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/rounded_border"
+                android:textSize="14sp"
+                android:textColorHint="#999999"
+                android:layout_marginEnd="8dp" />
+
+            <LinearLayout
+                android:id="@+id/suffix_dropdown"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/suffix_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Suffix"
+                    android:textSize="14sp"
+                    android:textColor="#999999" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Middle Name Field -->
+        <EditText
+            android:id="@+id/middle_name_field"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Middle Name"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/rounded_border"
+            android:textSize="14sp"
+            android:textColorHint="#999999"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Checkbox for no middle name -->
+        <CheckBox
+            android:id="@+id/no_middle_name_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I have no middle name"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Last Name Field -->
+        <EditText
+            android:id="@+id/last_name_field"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/rounded_border"
+            android:textSize="14sp"
+            android:textColorHint="#999999"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Email Address Field -->
+        <EditText
+            android:id="@+id/email_field"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/rounded_border"
+            android:textSize="14sp"
+            android:textColorHint="#999999"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/password_field"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/rounded_border"
+            android:textSize="14sp"
+            android:textColorHint="#999999"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Terms and Conditions Text -->
+        <TextView
+            android:id="@+id/terms_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By tapping Sign up, you agree with the Terms and Conditions and Privacy Notice"
+            android:textSize="11sp"
+            android:textColor="#666666"
+            android:textAlignment="center"
+            android:layout_marginBottom="24dp"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Sign Up Button -->
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Sign up"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_border"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Google Sign Up Button -->
+        <LinearLayout
+            android:id="@+id/google_signup_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/button_google"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_google"
+                android:contentDescription="Google Icon"
+                android:scaleType="centerInside"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up with Google"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Facebook Sign Up Button -->
+        <LinearLayout
+            android:id="@+id/facebook_signup_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/button_facebook"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_facebook"
+                android:contentDescription="Facebook Icon"
+                android:scaleType="centerInside"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up with Facebook"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Divider with "or" text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="20dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#CCCCCC" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" or "
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_marginHorizontal="8dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#CCCCCC" />
+
+        </LinearLayout>
+
+        <!-- Already have account text -->
+        <TextView
+            android:id="@+id/have_account_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have ePawPH account?"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/login_button_fr_signup"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Login here"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_border" />
+
+    </LinearLayout>
+
+</ScrollView>

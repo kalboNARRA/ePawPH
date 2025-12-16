@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ePawPH</string>
+    <string name="pet_status">Pet Status</string>
+    <string name="close">Close</string>
+</resources>

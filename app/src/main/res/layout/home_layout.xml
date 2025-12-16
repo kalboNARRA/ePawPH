@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomNav">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <!-- Top App Bar -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:background="#FFFFFF"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:elevation="2dp">
+
+                                <!-- Logo -->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center_vertical">
+
+                                        <TextView
+                                            android:id="@+id/logo_e"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="e"
+                                            android:textSize="32sp"
+                                            android:textColor="#58C185"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/logo_paw"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Paw"
+                                            android:textSize="28sp"
+                                            android:textColor="#2F2F2F"
+                                            android:textStyle="bold"
+                                            android:layout_marginStart="2dp" />
+
+                                        <TextView
+                                            android:id="@+id/logo_ph"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="PH"
+                                            android:textSize="10sp"
+                                            android:textColor="#2F2F2F"
+                                            android:textStyle="bold"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_marginBottom="3dp"
+                                            android:layout_gravity="bottom"/>
+
+                                </LinearLayout>
+
+                                <!-- Search Icon -->
+                                <ImageView
+                                    android:id="@+id/searchIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toStartOf="@id/notificationIcon"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/ic_search"
+                                    android:contentDescription="Search"/>
+
+                                <!-- Notification Icon -->
+                                <ImageView
+                                    android:id="@+id/notificationIcon"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_notification"
+                                    android:contentDescription="Notifications"/>
+
+                        </RelativeLayout>
+
+
+
+                        <!-- First Post -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="8dp">
+
+                                <!-- Post Header -->
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp">
+
+                                        <ImageView
+                                            android:id="@+id/profilePic1"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_alignParentStart="true"
+                                            android:src="@drawable/ic_profile"
+                                            android:contentDescription="Profile picture"/>
+
+                                        <LinearLayout
+                                            android:id="@+id/userInfo1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toEndOf="@id/profilePic1"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginStart="12dp"
+                                            android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Dave Ancheta"
+                                                    android:textSize="16sp"
+                                                    android:textStyle="bold"
+                                                    android:textColor="#000000"/>
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="PET OWNER"
+                                                    android:textSize="12sp"
+                                                    android:textColor="#757575"/>
+
+                                        </LinearLayout>
+
+                                        <Button
+                                            android:id="@+id/messageBtn1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="32dp"
+                                            android:layout_toStartOf="@id/moreBtn1"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginEnd="8dp"
+                                            android:text="MESSAGE"
+                                            android:textSize="11sp"
+                                            android:background="@drawable/button_bg_gray"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"/>
+
+                                        <ImageView
+                                            android:id="@+id/moreBtn1"
+                                            android:layout_width="24dp"
+                                            android:layout_height="24dp"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/ic_more_vert"
+                                            android:contentDescription="More options"/>
+
+                                </RelativeLayout>
+
+                                <!-- Post Image -->
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="300dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/dog"
+                                    android:contentDescription="Pet photo"/>
+
+                                <!-- Post Actions -->
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentStart="true"
+                                            android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="18dp"
+                                                    android:layout_height="18dp"
+                                                    android:contentDescription="Like"
+                                                    android:src="@drawable/ic_like" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginStart="4dp"
+                                                    android:text="1.7k"
+                                                    android:textSize="10sp" />
+
+                                                <ImageView
+                                                    android:layout_width="18dp"
+                                                    android:layout_height="18dp"
+                                                    android:layout_marginStart="16dp"
+                                                    android:contentDescription="Comment"
+                                                    android:src="@drawable/ic_comment" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginStart="4dp"
+                                                    android:text="1.2k"
+                                                    android:textSize="10sp" />
+
+                                                <ImageView
+                                                    android:layout_width="18dp"
+                                                    android:layout_height="18dp"
+                                                    android:layout_marginStart="16dp"
+                                                    android:contentDescription="Share"
+                                                    android:src="@drawable/ic_share" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginStart="4dp"
+                                                    android:text="243k"
+                                                    android:textSize="10sp" />
+
+                                        </LinearLayout>
+
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentEnd="true"
+                                            android:gravity="end"
+                                            android:orientation="horizontal">
+
+                                                <Button
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="24dp"
+                                                    android:background="@drawable/button_bg_white"
+                                                    android:paddingLeft="12dp"
+                                                    android:paddingRight="12dp"
+                                                    android:text="MORE INFO"
+                                                    android:textSize="10sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="2dp"
+                                                    android:layout_marginRight="2dp"
+                                                    android:text=""
+                                                    android:textColor="#F44336"
+                                                    android:textSize="10sp" />
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:gravity="center_horizontal"
+                                                    android:orientation="vertical"
+                                                    >
+
+                                                        <Button
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="24dp"
+                                                            android:background="@drawable/button_bg_red"
+                                                            android:paddingLeft="10dp"
+                                                            android:paddingRight="10dp"
+                                                            android:text="LOST"
+                                                            android:textSize="10sp" />
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginLeft="2dp"
+                                                            android:layout_marginRight="2dp"
+                                                            android:text="9 December"
+                                                            android:textColor="#000000"
+                                                            android:textSize="8sp"/>
+
+                                                </LinearLayout>
+
+
+
+                                        </LinearLayout>
+
+
+
+                                </RelativeLayout>
+
+                        </LinearLayout>
+
+
+
+
+                        <!-- Second Post -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="8dp">
+
+                                <!-- Post Header -->
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp">
+
+                                        <ImageView
+                                            android:id="@+id/profilePic2"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_alignParentStart="true"
+                                            android:src="@drawable/ic_profile"
+                                            android:contentDescription="Profile picture"/>
+
+                                        <LinearLayout
+                                            android:id="@+id/userInfo2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toEndOf="@id/profilePic2"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginStart="12dp"
+                                            android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="DE VERA POGI"
+                                                    android:textSize="16sp"
+                                                    android:textStyle="bold"
+                                                    android:textColor="#000000"/>
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="PET OWNER"
+                                                    android:textSize="12sp"
+                                                    android:textColor="#757575"/>
+
+                                        </LinearLayout>
+
+                                        <Button
+                                            android:id="@+id/messageBtn2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="32dp"
+                                            android:layout_toStartOf="@id/moreBtn2"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginEnd="8dp"
+                                            android:text="MESSAGE"
+                                            android:textSize="11sp"
+                                            android:background="@drawable/button_bg_gray"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="16dp"/>
+
+                                        <ImageView
+                                            android:id="@+id/moreBtn2"
+                                            android:layout_width="24dp"
+                                            android:layout_height="24dp"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/ic_more_vert"
+                                            android:contentDescription="More options"/>
+
+                                </RelativeLayout>
+
+                                <!-- Post Image -->
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="300dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat"
+                                    android:contentDescription="Pet photo"/>
+
+                                <!-- Post Actions -->
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="12dp">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentStart="true"
+                                            android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:layout_width="18dp"
+                                                    android:layout_height="18dp"
+                                                    android:contentDescription="Like"
+                                                    android:src="@drawable/ic_like" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginStart="4dp"
+                                                    android:text="1.7k"
+                                                    android:textSize="10sp" />
+
+                                                <ImageView
+                                                    android:layout_width="18dp"
+                                                    android:layout_height="18dp"
+                                                    android:layout_marginStart="16dp"
+                                                    android:contentDescription="Comment"
+                                                    android:src="@drawable/ic_comment" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginStart="4dp"
+                                                    android:text="1.2k"
+                                                    android:textSize="10sp" />
+
+                                                <ImageView
+                                                    android:layout_width="18dp"
+                                                    android:layout_height="18dp"
+                                                    android:layout_marginStart="16dp"
+                                                    android:contentDescription="Share"
+                                                    android:src="@drawable/ic_share" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginStart="4dp"
+                                                    android:text="243k"
+                                                    android:textSize="10sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentEnd="true"
+                                            android:gravity="end"
+                                            android:orientation="horizontal">
+
+                                                <Button
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="24dp"
+                                                    android:background="@drawable/button_bg_white"
+                                                    android:paddingLeft="12dp"
+                                                    android:paddingRight="12dp"
+                                                    android:text="MORE INFO"
+                                                    android:textSize="10sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="2dp"
+                                                    android:layout_marginRight="2dp"
+                                                    android:text=""
+                                                    android:textColor="#F44336"
+                                                    android:textSize="10sp" />
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:gravity="center_horizontal"
+                                                    android:orientation="vertical"
+                                                    >
+
+                                                        <Button
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="24dp"
+                                                            android:background="@drawable/button_bg_yellow"
+                                                            android:paddingLeft="10dp"
+                                                            android:paddingRight="10dp"
+                                                            android:text="ADAPTION"
+                                                            android:textSize="10sp" />
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginLeft="2dp"
+                                                            android:layout_marginRight="2dp"
+                                                            android:text="9 December"
+                                                            android:textColor="#000000"
+                                                            android:textSize="8sp"/>
+
+                                                </LinearLayout>
+
+
+
+                                        </LinearLayout>
+
+                                </RelativeLayout>
+
+                        </LinearLayout>
+
+
+
+                </LinearLayout>
+
+        </ScrollView>
+
+        <!-- Bottom Navigation - Fixed Position -->
+        <RelativeLayout
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF"
+            android:elevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="5">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_home"
+                            android:contentDescription="Home"/>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_messages"
+                            android:contentDescription="Messages"/>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/fabAddPost"
+                                    android:layout_width="56dp"
+                                    android:layout_height="56dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_add_post"
+                                    android:background="@drawable/circular_bg_dark"
+                                    android:contentDescription="Add post"
+                                    android:clickable="true"
+                                    android:focusable="true"/>
+
+                        </FrameLayout>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_globe"
+                            android:contentDescription="Paw"/>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_profile_nav"
+                            android:contentDescription="Profile"/>
+
+                </LinearLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>
